@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>3.0.2</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>com.myfirstWebApp</groupId>
+	<artifactId>myTodoListBySpringBoot</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>myTodoListBySpringBoot</name>
+	<description>Demo project for Spring Boot</description>
+	<properties>
+		<java.version>19</java.version>
+	</properties>
+	<dependencies>
+		<!--~~(org.springframework.boot:spring-boot-starter-web failed. Unable to download metadata. Tried repositories:
+https://repo.maven.apache.org/maven2: java.net.SocketTimeoutException: Connect timed out)~~>-->
+	<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<!--~~(org.springframework.boot:spring-boot-devtools failed. Unable to download metadata. Tried repositories:
+https://repo.maven.apache.org/maven2: java.net.SocketTimeoutException: Connect timed out)~~>--><dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<scope>runtime</scope>
+			<optional>true</optional>
+		</dependency>
+		<!--~~(org.springframework.boot:spring-boot-starter-test failed. Unable to download metadata. Tried repositories:
+https://repo.maven.apache.org/maven2: java.net.SocketTimeoutException: Connect timed out)~~>--><dependency>
+
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+<!-- er dara amra spring boot srart validation add korbo ex. direct todo te data add hobe web e noi-->
+<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-validation</artifactId>
+			</dependency>
+	
+<!--		ei dependency ti JSP diye html add korar jonno-->
+		<dependency>
+			<groupId>org.apache.tomcat.embed</groupId>
+			<artifactId>tomcat-embed-jasper</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		
+		<!-- JSTL dara amra todo list name description alada alada kore display korbo -->
+<dependency>
+    <groupId>jakarta.servlet.jsp.jstl</groupId>
+    <artifactId>jakarta.servlet.jsp.jstl-api</artifactId>
+</dependency>
+
+<!-- JSTL dara amra todo list name description alada alada kore display korbo -->
+<dependency>
+    <groupId>org.eclipse.jetty</groupId>
+    <artifactId>glassfish-jstl</artifactId>
+    
+</dependency>
+
+<!-- er dara amra bootStrap er css javaScript add korte pari-->
+
+	<dependency>
+		<groupId>org.webjars</groupId>
+		<artifactId>bootstrap</artifactId>
+		<version>5.2.2</version>
+	</dependency>
+
+
+<!-- er dara amra jQuery er css javaScript add korte pari-->
+
+	<dependency>
+		<groupId>org.webjars</groupId>
+		<artifactId>jquery</artifactId>
+		<version>3.6.3</version>
+	</dependency>
+	
+	<!--eti diya amra datePicker dependency add kor6i-->
+	<dependency>
+		<groupId>org.webjars</groupId>
+		<artifactId>bootstrap-datepicker</artifactId>
+		<version>1.9.0</version>
+	</dependency>
+	
+<!--er dara amra spring er login dependency add korbo. er dara autometically ekti login page ese jabe spring theke jar session o thakbe password auto generate hobe-->	
+	<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+		
+	<!--nicher duti dependency diye amra H2 database er sathe connect korabo-->
+	<dependency>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-data-jpa</artifactId>	
+	</dependency>
+	<dependency>
+		<groupId>com.h2database</groupId>
+		<artifactId>h2</artifactId>
+		<scope>runtime</scope>
+	</dependency>
+	
+	
+	<!-- er dara amra mysql connect korabo docker dara-->
+	<dependency>
+		<groupId>mysql</groupId>
+		<artifactId>mysql-connector-java</artifactId>
+		<version>8.0.32</version>
+	</dependency>
+	
+	
+		
+		
+
+	<dependency>
+		<groupId>com.udemy.example</groupId>
+		<artifactId>learn-spring-boot</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+	</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
